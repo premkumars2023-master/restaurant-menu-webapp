@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Haven - Restaurant Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f1de;
+        }
+
+        header {
+            background: linear-gradient(135deg, #8b4513 0%, #d4a574 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.2em;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: #6b3410;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #d4a574;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .menu-section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            color: #8b4513;
+            border-bottom: 3px solid #d4a574;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .menu-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #d4a574;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .item-name {
+            font-size: 1.5em;
+            color: #8b4513;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .item-description {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .item-price {
+            font-size: 1.3em;
+            color: #d4a574;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        footer {
+            background-color: #6b3410;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        footer h3 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        footer p {
+            margin: 10px 0;
+            font-size: 1em;
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        .footer-divider {
+            border-top: 1px solid #d4a574;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+
+            .menu-items {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>🍽️ Gourmet Haven</h1>
+        <p>"Where Every Meal is a Celebration"</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#starters">Starters</a></li>
+            <li><a href="#maincourse">Main Course</a></li>
+            <li><a href="#desserts">Desserts</a></li>
+            <li><a href="#beverages">Beverages</a></li>
+        </ul>
+    </nav>
+
+    <!-- Menu Sections -->
+    <div class="container">
+        <!-- Starters Section -->
+        <section class="menu-section" id="starters">
+            <h2 class="section-title">🥘 Starters</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-name">Crispy Spring Rolls</div>
+                    <div class="item-description">Golden fried spring rolls filled with vegetables and shrimp. Served with sweet chili dipping sauce.</div>
+                    <div class="item-price">$8.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Garlic Bread</div>
+                    <div class="item-description">Toasted Italian bread brushed with garlic butter and fresh herbs.</div>
+                    <div class="item-price">$5.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Bruschetta Medley</div>
+                    <div class="item-description">Crispy bread topped with fresh tomatoes, basil, garlic, and olive oil.</div>
+                    <div class="item-price">$7.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Mozzarella Sticks</div>
+                    <div class="item-description">Fried mozzarella cheese served with marinara sauce.</div>
+                    <div class="item-price">$6.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Calamari Rings</div>
+                    <div class="item-description">Tender calamari rings fried to perfection. Served with lemon and tartar sauce.</div>
+                    <div class="item-price">$9.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Chicken Wings</div>
+                    <div class="item-description">Spicy buffalo wings served with blue cheese dressing and celery sticks.</div>
+                    <div class="item-price">$7.99</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Course Section -->
+        <section class="menu-section" id="maincourse">
+            <h2 class="section-title">🍖 Main Course</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-name">Grilled Salmon Fillet</div>
+                    <div class="item-description">Atlantic salmon grilled with lemon butter sauce, served with asparagus and roasted potatoes.</div>
+                    <div class="item-price">$24.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Ribeye Steak</div>
+                    <div class="item-description">Prime cut ribeye steak cooked to perfection, served with garlic mashed potatoes and seasonal vegetables.</div>
+                    <div class="item-price">$32.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Chicken Parmesan</div>
+                    <div class="item-description">Breaded chicken breast topped with marinara sauce and melted mozzarella cheese.</div>
+                    <div class="item-price">$18.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Vegetarian Pasta Primavera</div>
+                    <div class="item-description">Fresh pasta with seasonal vegetables in a light olive oil and garlic sauce.</div>
+                    <div class="item-price">$14.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Beef Tacos (3)</div>
+                    <div class="item-description">Soft tortillas filled with seasoned beef, lettuce, tomato, cheese, and sour cream.</div>
+                    <div class="item-price">$12.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Butter Garlic Shrimp</div>
+                    <div class="item-description">Succulent shrimp sautéed in butter and garlic, served over rice pilaf.</div>
+                    <div class="item-price">$22.99</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Desserts Section -->
+        <section class="menu-section" id="desserts">
+            <h2 class="section-title">🍰 Desserts</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-name">Chocolate Lava Cake</div>
+                    <div class="item-description">Warm chocolate cake with a molten center, served with vanilla ice cream.</div>
+                    <div class="item-price">$8.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Cheesecake Supreme</div>
+                    <div class="item-description">New York style cheesecake with a graham cracker crust and fresh strawberry topping.</div>
+                    <div class="item-price">$7.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Tiramisu</div>
+                    <div class="item-description">Classic Italian dessert with layers of mascarpone cream and coffee-soaked ladyfingers.</div>
+                    <div class="item-price">$6.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Fruit Sorbet</div>
+                    <div class="item-description">Refreshing sorbet available in strawberry, mango, and lemon flavors.</div>
+                    <div class="item-price">$5.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Apple Pie</div>
+                    <div class="item-description">Traditional apple pie with vanilla ice cream on the side.</div>
+                    <div class="item-price">$6.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Brownie Sundae</div>
+                    <div class="item-description">Rich chocolate brownie topped with three scoops of ice cream and whipped cream.</div>
+                    <div class="item-price">$9.99</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beverages Section -->
+        <section class="menu-section" id="beverages">
+            <h2 class="section-title">🥤 Beverages</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-name">Fresh Orange Juice</div>
+                    <div class="item-description">Freshly squeezed orange juice, served cold.</div>
+                    <div class="item-price">$4.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Iced Tea</div>
+                    <div class="item-description">Refreshing iced tea with lemon. Available sweetened or unsweetened.</div>
+                    <div class="item-price">$2.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Cappuccino</div>
+                    <div class="item-description">Rich espresso topped with steamed milk and a layer of foam.</div>
+                    <div class="item-price">$4.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Strawberry Smoothie</div>
+                    <div class="item-description">Blended strawberries, yogurt, and honey for a refreshing treat.</div>
+                    <div class="item-price">$5.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">House Wine</div>
+                    <div class="item-description">Selection of red, white, or rosé wines. Glass or bottle available.</div>
+                    <div class="item-price">$6.99 / $24.99</div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-name">Craft Beer</div>
+                    <div class="item-description">Local craft beers featuring seasonal selections.</div>
+                    <div class="item-price">$5.99</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <h3>Contact Us</h3>
+        <div class="footer-section">
+            <p><strong>📍 Address:</strong> 123 Culinary Street, Food City, FC 12345</p>
+            <p><strong>📞 Phone:</strong> (555) 123-4567</p>
+            <p><strong>✉️ Email:</strong> info@gourmethaven.com</p>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-section">
+            <p><strong>Hours:</strong></p>
+            <p>Monday - Thursday: 11:00 AM - 10:00 PM</p>
+            <p>Friday - Saturday: 11:00 AM - 11:00 PM</p>
+            <p>Sunday: 12:00 PM - 9:00 PM</p>
+        </div>
+        <div class="footer-divider"></div>
+        <p>&copy; 2026 Gourmet Haven. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
